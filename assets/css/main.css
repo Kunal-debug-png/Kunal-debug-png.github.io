@@ -1257,9 +1257,12 @@ button {
   -ms-transition-delay: 0.75s;
   transition-delay: 0.75s;
   background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-  background-size: auto,    256px 256px;
-  background-position: center,    center;
-  background-repeat: no-repeat,    repeat;
+  background-size: auto,
+    256px 256px;
+  background-position: center,
+    center;
+  background-repeat: no-repeat,
+    repeat;
   z-index: 2;
 }
 
@@ -1940,4 +1943,24 @@ body.is-preload #footer {
   padding: 5px;
   color: #ffffff;
   /* White 'X' color */
+}
+.content {
+  max-width: 800px;
+  /* Set a maximum width for content */
+  margin: 0 auto;
+  /* Center align content */
+  line-height: 1.6;
+  /* Adjust line height for readability */
+  text-align: justify;
+  /* Justify text for consistent spacing */
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+  .content {
+    max-width: 90%;
+    /* Adjust width for smaller screens */
+    padding: 0 15px;
+    /* Add padding for better readability */
+  }
 }
