@@ -1944,16 +1944,6 @@ body.is-preload #footer {
   color: #ffffff;
   /* White 'X' color */
 }
-.content {
-  max-width: 800px;
-  /* Set a maximum width for content */
-  margin: 0 auto;
-  /* Center align content */
-  line-height: 1.6;
-  /* Adjust line height for readability */
-  text-align: justify;
-  /* Justify text for consistent spacing */
-}
 
 /* Media query for smaller screens (e.g., mobile devices) */
 @media only screen and (max-width: 768px) {
