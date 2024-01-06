@@ -1954,3 +1954,30 @@ body.is-preload #footer {
     /* Add padding for better readability */
   }
 }
+.square-container {
+  width: 200px; /* Set your desired width for the square */
+  height: 200px; /* Set your desired height for the square */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #f0f0f0; /* Background color */
+  overflow: hidden; /* Hide overflowing content */
+  /* Add any other styles specific to the square container */
+}
+
+.square-container p {
+  /* Add styles for the paragraph inside the square */
+  width: 80%; /* Width of the paragraph inside the square */
+  margin: 0 auto; /* Center the paragraph inside the square */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .square-container {
+    width: 150px; /* Adjust width for smaller screens */
+    height: 150px; /* Adjust height for smaller screens */
+  }
+
+  .square-container p {
+    width: 90%; /* Adjust width of the paragraph for smaller screens */
+    /* Add any other responsive styles for the paragraph inside the square */
+  }
+}
