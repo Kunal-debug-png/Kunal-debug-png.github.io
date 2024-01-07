@@ -1981,3 +1981,57 @@ body.is-preload #footer {
     /* Add any other responsive styles for the paragraph inside the square */
   }
 }
+/* Updated CSS for the timeline */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.entry {
+  display: flex;
+  align-items: flex-start;
+  /* Align items at the start */
+  margin-bottom: 20px;
+}
+
+.date {
+  flex: 0 0 100px;
+  font-weight: bold;
+  padding-top: 5px;
+  /* Adjust vertical alignment */
+}
+
+.description {
+  flex: 1;
+  /* Occupy remaining space */
+  margin-left: 20px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+/* Add other styles as needed */
+/* Example of a media query for responsiveness */
+@media (max-width: 768px) {
+  .entry {
+    flex-direction: column;
+    /* Stack items vertically on smaller screens */
+  }
+
+  .date {
+    flex: 0 0 auto;
+    /* Allow date to grow/shrink */
+    width: auto;
+  }
+
+  .description {
+    flex: 1;
+    margin-left: 0;
+    margin-top: 10px;
+    /* Add space between date and description */
+  }
+
+  /* Add other responsive styles as needed */
+}
