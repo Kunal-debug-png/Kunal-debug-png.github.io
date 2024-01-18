@@ -21,10 +21,10 @@ function executeCommand() {
   commandInput = intValue;
 
   if (commandInput == 8) {
-    window.location.href = 'https://majesticinfatuatedsymbol.kunalchhablani.repl.co/';
+    window.location.href = 'https://kunal-debug-png.github.io/';
   }
   if (commandInput == 7) {
-    window.location.href = 'https://majesticinfatuatedsymbol.kunalchhablani.repl.co/#contact';
+    window.location.href = 'https://kunal-debug-png.github.io/#contact';
   }
   let output = document.getElementById('output');
 
