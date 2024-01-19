@@ -27,7 +27,10 @@ function executeCommand() {
     window.location.href = 'https://kunal-debug-png.github.io/#contact';
   }
   if (commandInput == 5) {
-    window.location.href = 'https://kunal-debug-png.github.io/#contact';
+    window.location.href = 'https://kunal-debug-png.github.io/#work';
+  }
+  if (commandInput == 4) {
+    window.location.href = 'https://kunal-debug-png.github.io/#progress';
   }
   let output = document.getElementById('output');
 
