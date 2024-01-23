@@ -2035,3 +2035,34 @@ body.is-preload #footer {
 
   /* Add other responsive styles as needed */
 }
+/* Add your website styles here */
+
+/* Add your website styles here */
+
+/* Add your website styles here */
+
+/* Add your website styles here */
+
+.bot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 28px; /* Adjust the size as needed */
+  color: #000; /* Adjust the color as needed */
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 56px; /* Adjust the width as needed */
+  height: 56px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.bot-icon:hover {
+  background-color: #fff; /* Change background color on hover */
+}
+
+/* Add additional styling as needed */
