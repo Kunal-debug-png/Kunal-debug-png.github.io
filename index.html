@@ -44,12 +44,9 @@
         </ul>
       </nav>
     </header>
-    <div onclick="window.location.href='https://kunal-debug-png.github.io/#contact'" class="notification"
-      id="notification">
-      <a style="cursor:pointer;">Seeking Internship Opportunities in Innovative Startups</a>
-      <span onclick="closeNotification()"
-        style="cursor: pointer; position: absolute; top: -2px; right: 6px; background: transparent; border: none; border-radius: 50%; padding: 5px; color: #ffffff;">X</span>
-    </div>
+    <div id="bot-icon" class="bot-icon" onclick="redirectToWebsite()">
+      <i class="fas fa-robot"></i>
+  </div>
     <!-- Main -->
     <div id="main">
 
@@ -586,6 +583,11 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script> // Redirect to the specified website
+  function redirectToWebsite() {
+      window.location.href = "bot/index.html";  // Replace with your desired website URL
+  }
+</script>  
   <script>
     function filterBlog(category) {
       var blogs = document.querySelectorAll('#about > .blog-post');
