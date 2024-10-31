@@ -29,9 +29,9 @@ function executeCommand() {
   if (commandInput == 5) {
     window.location.href = 'https://kunal-debug-png.github.io/#work';
   }
-  if (commandInput == 4) {
-    window.location.href = 'https://kunal-debug-png.github.io/#progress';
-  }
+  //if (commandInput == 4) {
+    //window.location.href = 'https://kunal-debug-png.github.io/#progress';
+  //}
   let output = document.getElementById('output');
 
   fetch('data.json')
