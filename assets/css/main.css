@@ -1462,11 +1462,17 @@ body.is-preload #bg:before {
   padding-left: 0;
   border: solid 1px #ffffff;
   border-radius: 4px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 #header nav ul li {
   padding-left: 0;
   border-left: solid 1px #ffffff;
+  flex: 1;
+  min-width: 0;
 }
 
 #header nav ul li:first-child {
@@ -1475,14 +1481,18 @@ body.is-preload #bg:before {
 
 #header nav ul li a {
   display: block;
-  min-width: 7.5rem;
+  min-width: 4rem;
   height: 2.75rem;
   line-height: 2.75rem;
-  padding: 0 1.25rem 0 1.45rem;
+  padding: 0 0.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-size: 0.6rem;
   border-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 
 #header nav ul li a:hover {
@@ -1575,6 +1585,51 @@ body.is-preload #header .content .inner {
     line-height: 1.875;
   }
 
+}
+
+@media screen and (max-width: 980px) {
+  #header nav ul {
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #header nav ul li a {
+    min-width: 4.5rem;
+    font-size: 0.6rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #header nav ul {
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 12rem;
+    max-width: 100%;
+  }
+
+  #header nav ul li {
+    border-left: 0;
+    border-top: solid 1px #ffffff;
+  }
+
+  #header nav ul li:first-child {
+    border-top: 0;
+  }
+
+  #header nav ul li a {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    min-width: 0;
+    width: 100%;
+    font-size: 0.7rem;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2006,10 +2061,10 @@ body.is-preload #footer {
   flex: 1;
   /* Occupy remaining space */
   margin-left: 20px;
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 5px;
-  color: black;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: #ffffff;
 }
 
 /* Add other styles as needed */
@@ -2066,3 +2121,177 @@ body.is-preload #footer {
 }
 
 /* Add additional styling as needed */
+
+/* Work Experience and Education Timeline Styling */
+#experience .timeline,
+#education .timeline {
+  position: relative;
+  padding: 20px 0;
+  margin: 0;
+  list-style: none;
+}
+
+#experience .timeline::before,
+#education .timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ffffff;
+}
+
+#experience .entry,
+#education .entry {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 50px;
+  display: block;
+}
+
+#experience .entry::before,
+#education .entry::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #1b1f22;
+}
+
+#experience .entry .date,
+#education .entry .date {
+  font-weight: 600;
+  font-size: 0.8em;
+  color: #ffffff;
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+#experience .entry .description,
+#education .entry .description {
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  color: #ffffff !important;
+}
+
+#experience .entry .description h3,
+#education .entry .description h3 {
+  color: #ffffff !important;
+  font-size: 1.1em;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+#experience .entry .description p,
+#education .entry .description p {
+  color: #ffffff !important;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+#experience .entry .description ul,
+#education .entry .description ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  background: transparent !important;
+}
+
+#experience .entry .description li,
+#education .entry .description li {
+  color: #ffffff !important;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  padding-left: 22px;
+  position: relative;
+  font-size: 0.9em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  background: transparent !important;
+}
+
+#experience .entry .description li::before,
+#education .entry .description li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.technical-skills {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.technical-skills h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skill-category h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.skill-category p {
+  color: #ffffff;
+  line-height: 1.6;
+  opacity: 0.9;
+  font-size: 0.85em;
+}
+
+@media screen and (max-width: 768px) {
+  #experience .timeline::before,
+  #education .timeline::before {
+    left: 10px;
+  }
+  
+  #experience .entry,
+  #education .entry {
+    padding-left: 40px;
+  }
+  
+  #experience .entry::before,
+  #education .entry::before {
+    left: 4px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
