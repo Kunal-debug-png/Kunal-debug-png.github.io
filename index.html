@@ -12,6 +12,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/custom-enhancements.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
@@ -33,7 +35,7 @@
 
     <!-- Header -->
     <header id="header">
-      <div class="logo" >
+      <div class="logo" onclick="openVideoModal()">
         <span class="emoji-icon" style="cursor:pointer;"><a>💻</a></span>
       </div>
       <div class="content">
@@ -547,6 +549,23 @@
 
   </div>
 
+  <!-- Video Modal -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+      <span class="video-close" onclick="closeVideoModal()">&times;</span>
+      <h2 class="video-title">Graph RAG - Talk to your RDBMS without querying</h2>
+      <div class="video-container">
+        <video id="videoPlayer" controls autoplay>
+          <source src="images/videos/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="video-description">
+        Exploring Graph-based Retrieval Augmented Generation for enhanced AI knowledge systems.
+      </p>
+    </div>
+  </div>
+
   <!-- BG -->
   <div id="bg"></div>
 
@@ -559,6 +578,43 @@
   <script> // Redirect to the specified website
   function redirectToWebsite() {
       window.location.href = "bot/index.html";  // Replace with your desired website URL
+  }
+
+  // Video Modal Functions
+  function openVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const videoPlayer = document.getElementById('videoPlayer');
+    
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    
+    // Play the video
+    if (videoPlayer) {
+      videoPlayer.currentTime = 0; // Start from beginning
+      videoPlayer.play();
+    }
+  }
+
+  function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const videoPlayer = document.getElementById('videoPlayer');
+    
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    
+    // Pause and reset video
+    if (videoPlayer) {
+      videoPlayer.pause();
+      videoPlayer.currentTime = 0;
+    }
+  }
+
+  // Close modal when clicking outside
+  window.onclick = function(event) {
+    const modal = document.getElementById('videoModal');
+    if (event.target == modal) {
+      closeVideoModal();
+    }
   }
 </script>  
   <script>
